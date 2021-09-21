@@ -9,7 +9,7 @@ class EmployeeController extends Controller
 {
     public function getData()
     {
-        $employeeData = Employee::all();
-        return view('home', compact('employeeData'));
+        $employees = Employee::paginate(50);
+        return view('home', compact('employees'));
     }
 }
