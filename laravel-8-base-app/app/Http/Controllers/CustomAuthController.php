@@ -78,6 +78,4 @@ class CustomAuthController extends Controller
   
         return Redirect('login');
     }
-
-
 }
