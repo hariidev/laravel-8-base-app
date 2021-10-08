@@ -12,4 +12,10 @@ class EmployeeController extends Controller
         $employees = Employee::paginate(50);
         return view('home', compact('employees'));
     }
+
+    public function setData()
+    {
+        $employees = Employee::paginate(50);
+        return view('home', compact('employees'));
+    }
 }
