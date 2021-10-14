@@ -12,4 +12,22 @@ class ProductController extends Controller
         $products = Product::all()->toArray();
         return array_reverse($products);
     }
+
+    public function store(Request $request)
+    {
+        $product = new Product([
+            'name' => $request->input('name'),
+            'detail' => $request->input('detail')
+        ]);
+        $product->save();
+
+        return response()->json('Product created!');
+    }
+
+    public function show($id)
+    {
+        $product = Product::find($id);
+        return response()->json($product);
+    }
+
 }
