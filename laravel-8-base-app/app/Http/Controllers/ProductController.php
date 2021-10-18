@@ -38,12 +38,12 @@ class ProductController extends Controller
         return response()->json('Product updated!');
     }
 
-    public function destroy($id)
-    {
-        $product = Product::find($id);
-        $product->delete();
+    // public function destroy($id)
+    // {
+    //     $product = Product::find($id);
+    //     $product->delete();
 
-        return response()->json('Product deleted!');
-    }
+    //     return response()->json('Product deleted!');
+    // }
 
 }
