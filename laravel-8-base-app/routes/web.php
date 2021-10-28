@@ -16,9 +16,9 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('getdata', [EmployeeController::class, 'getData']);
 
@@ -35,6 +35,6 @@ Route::get('/', function () {
 // Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 Route::get('{any}', function () {
-    return view('app');
+    return view('layout/app');
 })->where('any', '.*');
 
