@@ -29,8 +29,7 @@ class CustomAuthController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        $data = $request->all();
-        $check = $this->create($data);
+      
 
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
