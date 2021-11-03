@@ -15,7 +15,11 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-       
+        $product = new Product([
+            'name' => $request->input('name'),
+            'detail' => $request->input('detail')
+        ]);
+        $product->save();
 
         return response()->json('Product created!');
     }
@@ -28,7 +32,8 @@ class ProductController extends Controller
 
     public function update($id, Request $request)
     {
-       
+        $product = Product::find($id);
+        $product->update($request->all());
 
         return response()->json('Product updated!');
     }
