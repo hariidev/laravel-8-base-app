@@ -53,7 +53,7 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::prefix('manager')
                 ->namespace($this->namespace)
-                ->group(base_path('routes/admin.php'));
+                ->group(base_path('routes/manager.php'));
         });
     }
 
