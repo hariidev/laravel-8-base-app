@@ -19,6 +19,6 @@ use App\Http\Controllers\ProductController;
 //     return $request->user();
 // });
 
-Route::middleware('api')->group(function () {
-    Route::resource('products', ProductController::class);
-});
+// Route::middleware('api')->group(function () {
+//     Route::resource('products', ProductController::class);
+// });
