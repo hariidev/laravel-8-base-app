@@ -15,13 +15,13 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        // $faker = Faker::create();
 
-    	foreach (range(1,200) as $index) {
-            Product::insert([
-                'name' => $faker->firstname,
-                'detail' => $faker->address,
-            ]);
-        }
+    	// foreach (range(1,200) as $index) {
+        //     Product::insert([
+        //         'name' => $faker->firstname,
+        //         'detail' => $faker->address,
+        //     ]);
+        // }
     }
 }
