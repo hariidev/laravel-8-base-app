@@ -15,15 +15,15 @@ class EmployeeSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        // $faker = Faker::create();
 
-        foreach (range(1, 500) as $index) {
-            Employee::insert([
-                'firstname' => $faker->firstname,
-                'lastname' => $faker->lastname,
-                'email' => $faker->email,
-                'dob' => $faker->date($format = 'D-m-y', $max = '2021', $min = '2010')
-            ]);
-        }
+        // foreach (range(1, 500) as $index) {
+        //     Employee::insert([
+        //         'firstname' => $faker->firstname,
+        //         'lastname' => $faker->lastname,
+        //         'email' => $faker->email,
+        //         'dob' => $faker->date($format = 'D-m-y', $max = '2021', $min = '2010')
+        //     ]);
+        // }
     }
 }
