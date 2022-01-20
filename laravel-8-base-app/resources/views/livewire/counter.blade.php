@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livewire Counter</title>
-    @livewireStyles
-</head>
-
-<body>
-    <livewire:counter />
-
-    <div style="text-align: center">
-        <button wire:click="increment">+</button>
-        <h1>{{ $count }}</h1>
-    </div>
-
-
-    @livewireScripts
-</body>
-
-</html>
+<div style="text-align: center">
+    <h2>Counter</h2>
+    <button wire:click="increment">+</button>
+    <h1>{{ $count }}</h1>
+</div>
