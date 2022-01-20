@@ -17,10 +17,10 @@ use App\Http\Controllers\EmployeeController;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('home');
 // });
 
-// Route::get('getdata', [EmployeeController::class, 'getData']);
+Route::get('getdata', [EmployeeController::class, 'getData']);
 
 // Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 
