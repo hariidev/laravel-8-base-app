@@ -38,3 +38,7 @@ Route::get('getdata', [EmployeeController::class, 'getData']);
 //     return view('layout/app');
 // })->where('any', '.*');
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
