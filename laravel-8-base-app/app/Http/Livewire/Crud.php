@@ -9,6 +9,7 @@ class Crud extends Component
 {
     public function render()
     {
+        $this->students = Student::all();
         return view('livewire.crud');
     }
 
