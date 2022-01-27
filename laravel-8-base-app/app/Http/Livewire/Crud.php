@@ -36,6 +36,11 @@ class Crud extends Component
         $this->resetCreateForm();
     }
 
+    public function openModalPopover()
+    {
+        $this->isModalOpen = true;
+    }
+
     public function closeModalPopover()
     {
         $this->isModalOpen = false;
@@ -46,5 +51,28 @@ class Crud extends Component
         $this->name = '';
         $this->email = '';
         $this->mobile = '';
+    }
+
+    public function create()
+    {
+        $this->resetCreateForm();
+        $this->openModalPopover();
+    }
+
+    public function edit($id)
+    {
+        $student = Student::findOrFail($id);
+        $this->student_id = $id;
+        $this->name = $student->name;
+        $this->email = $student->email;
+        $this->mobile = $student->mobile;
+
+        $this->openModalPopover();
+    }
+
+    public function delete($id)
+    {
+        Student::find($id)->delete();
+        session()->flash('message', 'Studen deleted.');
     }
 }

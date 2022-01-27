@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Livewire\Crud;
 
 
 /*
@@ -42,3 +43,6 @@ Route::get('getdata', [EmployeeController::class, 'getData']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('students', Crud::class);
