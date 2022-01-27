@@ -36,6 +36,11 @@ class Crud extends Component
         $this->resetCreateForm();
     }
 
+    public function openModalPopover()
+    {
+        $this->isModalOpen = true;
+    }
+
     public function closeModalPopover()
     {
         $this->isModalOpen = false;
