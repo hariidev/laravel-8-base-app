@@ -64,4 +64,10 @@ class Crud extends Component
 
         $this->openModalPopover();
     }
+
+    public function delete($id)
+    {
+        Student::find($id)->delete();
+        session()->flash('message', 'Studen deleted.');
+    }
 }
