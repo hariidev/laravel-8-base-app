@@ -47,4 +47,10 @@ class Crud extends Component
         $this->email = '';
         $this->mobile = '';
     }
+
+    public function create()
+    {
+        $this->resetCreateForm();
+        $this->openModalPopover();
+    }
 }
