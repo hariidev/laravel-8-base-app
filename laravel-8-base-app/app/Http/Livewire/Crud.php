@@ -53,4 +53,15 @@ class Crud extends Component
         $this->resetCreateForm();
         $this->openModalPopover();
     }
+
+    public function edit($id)
+    {
+        $student = Student::findOrFail($id);
+        $this->student_id = $id;
+        $this->name = $student->name;
+        $this->email = $student->email;
+        $this->mobile = $student->mobile;
+
+        $this->openModalPopover();
+    }
 }
