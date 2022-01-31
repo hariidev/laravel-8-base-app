@@ -22,7 +22,7 @@
             @include('livewire.create')
             @endif
             <table class="table-fixed w-full">
-                <!-- <thead>
+                <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">No.</th>
                         <th class="px-4 py-2">Name</th>
@@ -30,7 +30,7 @@
                         <th class="px-4 py-2">Mobile</th>
                         <th class="px-4 py-2">Action</th>
                     </tr>
-                </thead> -->
+                </thead>
                 <tbody>
                     @foreach($students as $student)
                     <tr>
