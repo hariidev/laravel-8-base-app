@@ -9,6 +9,7 @@ class Crud extends Component
 {
     public $students, $name, $email, $mobile, $student_id;
     public $isModalOpen = 0;
+    public $search = '';
 
     public function render()
     {
