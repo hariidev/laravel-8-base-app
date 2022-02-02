@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($students as $student)
+                    @foreach($students as $students)
                     <tr>
                         <td class="border px-4 py-2">{{ $student->id }}</td>
                         <td class="border px-4 py-2">{{ $student->name }}</td>
