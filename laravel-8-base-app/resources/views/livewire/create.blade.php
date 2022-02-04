@@ -16,7 +16,7 @@
                                 id="exampleFormControlInput1" placeholder="Enter Name" wire:model="name">
                             @error('name') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
-                        <div class="mb-4">
+                        <!-- <div class="mb-4">
                             <label for="exampleFormControlInput2"
                                 class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                             <textarea
@@ -24,7 +24,7 @@
                                 id="exampleFormControlInput2" wire:model="email"
                                 placeholder="Enter Email"></textarea>
                             @error('email') <span class="text-red-500">{{ $message }}</span>@enderror
-                        </div>
+                        </div> -->
                         <div class="mb-4">
                             <label for="exampleFormControlInput2"
                                 class="block text-gray-700 text-sm font-bold mb-2">Mobile:</label>
