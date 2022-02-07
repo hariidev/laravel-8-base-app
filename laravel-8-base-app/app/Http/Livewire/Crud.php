@@ -49,9 +49,9 @@ class Crud extends Component
 
     private function resetCreateForm()
     {
-        // $this->name = '';
-        // $this->email = '';
-        // $this->mobile = '';
+        $this->name = '';
+        $this->email = '';
+        $this->mobile = '';
     }
 
     public function create()
