@@ -73,7 +73,7 @@ class Crud extends Component
 
     public function delete($id)
     {
-        // Student::find($id)->delete();
-        // session()->flash('message', 'Studen deleted.');
+        Student::find($id)->delete();
+        session()->flash('message', 'Studen deleted.');
     }
 }
