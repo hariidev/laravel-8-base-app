@@ -29,8 +29,8 @@ class CustomAuthController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        $data = $request->all();
-        $check = $this->create($data);
+        // $data = $request->all();
+        // $check = $this->create($data);
 
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
@@ -50,13 +50,13 @@ class CustomAuthController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-   
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
                         ->withSuccess('Signed in');
         }
-  
+
         return redirect("login")->withSuccess('Login details are not valid');
     }
 
@@ -65,15 +65,15 @@ class CustomAuthController extends Controller
         if(Auth::check()){
             return view('dashboard');
         }
-  
+
         return redirect("login")->withSuccess('You are not allowed to access');
     }
 
-    
+
     public function signOut() {
         Session::flush();
         Auth::logout();
-  
+
         return Redirect('login');
     }
 }
