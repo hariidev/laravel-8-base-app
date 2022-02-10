@@ -62,13 +62,13 @@ class Crud extends Component
 
     public function edit($id)
     {
-        // $student = Student::findOrFail($id);
-        // $this->student_id = $id;
-        // $this->name = $student->name;
-        // $this->email = $student->email;
-        // $this->mobile = $student->mobile;
+        $student = Student::findOrFail($id);
+        $this->student_id = $id;
+        $this->name = $student->name;
+        $this->email = $student->email;
+        $this->mobile = $student->mobile;
 
-        // $this->openModalPopover();
+        $this->openModalPopover();
     }
 
     public function delete($id)
